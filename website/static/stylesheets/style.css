@@ -1,0 +1,43 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    background-color: rgb(63, 93, 104);
+}
+
+img {
+    width: 100%;
+}
+
+.background {
+    overflow-y: hidden;
+    position: fixed;
+}
+
+.foreground {
+    position: absolute;
+    width: 100%;
+    margin-top: 17%;
+}
+
+.page-title {
+    color: rgb(255, 204, 0);
+    margin: 0px;
+    text-shadow: 5px 5px 3px rgb(153, 0, 0);
+    font-family: 'Rage Italic';
+    font-size: 8em;
+    text-align: center;
+    transition: ease 3ms;
+    cursor: default;
+    margin-bottom: 40%;
+}
+
+.content {
+    background-color: white;
+}
+
+/* .nav-link {
+    color: rgb(63, 93, 104);
+} */
