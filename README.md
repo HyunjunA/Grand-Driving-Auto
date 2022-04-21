@@ -50,6 +50,8 @@ Model Names: CNN, AlexNet, AlexNetV2, Xception, ResNet50 or InceptionV3
 
 add flag -l to load a model from a checkpoint file
 
+    Example: python train_model_v3.py -d ./data -dv ./data -nt 1 -nv 1 -m InceptionV3 -e 1 -b 1 -s 10 -lr 0.01 
+    
 Model Names: ConvLSTM, LSTM, CNN, AlexNet, AlexNetV2, Xception, ResNet50 or InceptionV3
 
 
