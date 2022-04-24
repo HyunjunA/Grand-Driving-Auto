@@ -25,8 +25,6 @@ import random
 import glob
 from constants import IMAGE_HEIGHT,IMAGE_WIDTH
 
-# Train model using static validation dataset
-
 
 
 def main():
@@ -77,6 +75,7 @@ def main():
     seq_len = args.seq_len
     learning_rate = args.learning_rate
 
+    # Based on your dataset, change class_weights.
     class_weight = {0 : 0.32,
                     1 : 3.63,
                     2 : 1.56,
@@ -90,14 +89,15 @@ def main():
 
     #Choose Model
     if resize:
+        # Based on your dataset, change height and width
         image_height = 360
         image_width = 480
     else:
         image_height = IMAGE_HEIGHT
         image_width = IMAGE_WIDTH
-    if model_name=='ConvLSTM':
-        model = convLSTM(seq_len)
-    elif model_name== "InceptionV3":
+    # if model_name=='ConvLSTM':
+    #     model = convLSTM(seq_len)
+    if model_name== "InceptionV3":
         model = InceptionV3(image_height,image_width)
     elif model_name=="AlexNet":
         model = alexnet(image_height,image_width)
@@ -107,7 +107,10 @@ def main():
         model = xception(image_height,image_width)
     elif model_name== "ResNet50":
         model = ResNet50(image_height,image_width)
-    else: #CNN model
+    elif model_name == "CNN":
+        model = cnn(image_height,image_width)
+    
+    elif model_name == "svm":
         model = cnn(image_height,image_width)
 
 
