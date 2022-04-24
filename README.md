@@ -81,3 +81,5 @@ If you want to use GPU, please remove this below. The code is the first part of 
         # Invalid device or cannot modify virtual devices once initialized.
         pass
 ```
+## Tensorboard
+tensorboard dev upload --logdir .\tb_logs
